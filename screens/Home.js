@@ -1,16 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text,SafeAreaView,ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import CalendarComponent from '../components/CalendarComponent';
 import Icon from 'react-native-vector-icons/Ionicons';
-
-
 
 import {
   StyledConstainer,
   InnerConstainer,
   StyledConstainerUser,
-  ImageConstainerUser,
+  // ImageConstainerUser,
   StyledNotificationConstainerUser,
   StyledCalendar,
   StyledNote,
@@ -28,22 +26,22 @@ const Home = () => {
 
 
   return (
+    
     <StyledConstainer>
+      <SafeAreaView>
+      <ScrollView>
       <InnerConstainer>
         <StyledConstainerUser>
-          <StyledIconDrawer onPress={() => navigation.openDrawer()}>
+        <StyledIconDrawer onPress={() => navigation.openDrawer()}>
             <Icon name="menu-outline" size={40} color="white" />
           </StyledIconDrawer>
-          <StyledNotificationConstainerUser>
+          <StyledNotificationConstainerUser  >
             <Icon name="notifications-outline" size={30} color="white" />
           </StyledNotificationConstainerUser>
-          <ImageConstainerUser source={{ uri: avatarUrl }} />
+          {/* <ImageConstainerUser source={{ uri: avatarUrl }} /> */}
           <StyledTextConstainerUser>User Name</StyledTextConstainerUser>
 
         </StyledConstainerUser>
-
-
-
         <StyledCalendar>
           <CalendarComponent />
         </StyledCalendar>
@@ -51,7 +49,10 @@ const Home = () => {
           <Text style={{ fontSize: 50 }}>Note</Text>
         </StyledNote> */}
       </InnerConstainer>
+      </ScrollView>
+      </SafeAreaView>
     </StyledConstainer>
+    
   );
 };
 

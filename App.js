@@ -1,24 +1,19 @@
-import 'react-native-gesture-handler';
+
+
 import React from 'react';
-
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-
-import AppStack from './navigation/AppStack'
-import AuthStack from './navigation/AuthSatck';
 import RootStack from './navigation/RootStack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Drawer = createDrawerNavigator();
 
+const Stack = createNativeStackNavigator();
 
-export default function App() {
-  return (<> 
+const App = () => {
+  return (
     <NavigationContainer>
       <RootStack />
-      {/* <AppStack/> */}
-      {/* <AuthStack/> */}
     </NavigationContainer>
-    
-    </>
   );
-}
+};
+
+export default App;

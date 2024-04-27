@@ -25,7 +25,6 @@ const {primary,secondary,terliary,green,textGrayOne,white ,red} = Colors ;
 export const StyledConstainer = styled.View`
     flex : 1 ;
     padding: 25px ; 
-    padding-top: ${statusBarHeight + 10}px;
     background-color: ${primary}; 
 `;
 export const InnerConstainer = styled.View`
@@ -96,6 +95,17 @@ export const StyledButton = styled.TouchableOpacity`
     top: 56px;
 `;
 
+export const StyledButtonConge = styled.TouchableOpacity`
+    padding: 15px;
+    background-color: ${green};
+    justify-content: center;
+    border-radius: 50px;
+    height: 64px;
+    width: 240px;
+    align-items: center;
+    
+`;
+
 export const ButtonText =styled.Text`
     color: ${white} ;
     font-size: 24px;
@@ -129,25 +139,25 @@ export const StyledConstainerUser = styled.View`
 `;
 
 export const StyledTextConstainerUser = styled.Text`
-    font-size: 30;
+    font-size: 30px;
     color: ${white};
-    top: 30;
+    top: 30px;
     
 `;
 
 export const StyledNotificationConstainerUser = styled.TouchableOpacity`
     position: absolute;
     z-index: 1;
-    top: 20;
-    right: 20;
+    : 20;
+    right: 20px;
     
 `;
 
 export const StyledIconDrawer = styled.TouchableOpacity`  
     position: absolute;
     z-index: 1;
-    left: 10;
-    top: 10;
+    left: 10px;
+    top: 10px;
     
     
 `;
@@ -160,15 +170,15 @@ export const StyledIconDrawer = styled.TouchableOpacity`
 //     border-radius: 20px;
 // `;
 
-export const ImageConstainerUser = styled.Image`
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    top: 16px;
-    border: 3px;
-    border-color: aliceblue;
+// +++ export const ImageConstainerUser = styled.Image`
+//     width: 60px;
+//     height: 60px;
+//     border-radius: 30px;
+//     top: 16px;
+//     border: 3px;
+//     border-color: aliceblue;
     
-`;
+// `;
 
 export const StyledCalendar =styled.View`
   
@@ -191,7 +201,7 @@ export const StyledNote =styled.View`
 export const MessaheBox =styled.Text`
     
     text-align: center;
-    color: ${(props) => (props.type == 'SUCCÈS' ? 'blue' :red)};
+    color: red;
 `;
 
 
